@@ -9,8 +9,16 @@ set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
 "## original repos on github
+Bundle 'thinca/vim-quickrun'
 
 "## vim-scripts repos
+Bundle 'YankRing.vim'
+Bundle 'surround.vim'
+Bundle 'Changed'
+Bundle 'matchit.zip'
+Bundle 'molokai'
+Bundle 'Solarized'
+Bundle 'Wombat'
 
 "## non github repos
 
@@ -70,7 +78,7 @@ set ruler "ルーラーの表示
 set showcmd "入力中のコマンドをステータスに表示
 set showmatch "括弧入力時の対応する括弧表示
 set background=dark
-"colorscheme molokai "カラー表示スキーマ
+colorscheme molokai "カラー表示スキーマ
 "set list "不過視文字の表示
 "set listchars=tab:▸\ ,eol:¬ "不過視文字表示設定
 "set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
