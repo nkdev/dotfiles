@@ -1,13 +1,27 @@
 "####################
-" 分割ファイル読み込み
-"####################
-runtime! userautoload/charcode.vim "文字コード関連
-
-"####################
 " システム
 "####################
 set nocompatible "vi非互換モード
+"### vundle setting
+filetype off
+
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
+
+"## original repos on github
+
+"## vim-scripts repos
+
+"## non github repos
+
+filetype plugin indent on
+
 set helplang=ja "Helpを日本語優先
+
+"####################
+" 分割ファイル読み込み
+"####################
+runtime! usrautoload/charcode.vim "文字コード関連
 
 "####################
 " キーバインド
@@ -46,6 +60,7 @@ inoremap <C-l> <Right>
 "####################
 " 表示系
 "####################
+syntax on "カラー表示
 set laststatus=2 "ステータスラインを常に表示
 set statusline=%F%m%r%h%w\ [%{&fenc}/%{&ff}]\ [%Y]\ %=[%04v,%04l/%L][%p%%] "ステータス表示フォーマット
 "set number "行番号表示
@@ -54,7 +69,8 @@ set title "編集中のファイル名表示
 set ruler "ルーラーの表示
 set showcmd "入力中のコマンドをステータスに表示
 set showmatch "括弧入力時の対応する括弧表示
-colorscheme wombat "カラー表示スキーマ
+set background=dark
+"colorscheme molokai "カラー表示スキーマ
 "set list "不過視文字の表示
 "set listchars=tab:▸\ ,eol:¬ "不過視文字表示設定
 "set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
@@ -99,8 +115,6 @@ augroup END
 "####################
 " プログラミングヘルプ系
 "####################
-syntax on "カラー表示
-filetype plugin indent on
 set smartindent "オートインデント
 "### タブ入力表示設定
 set expandtab "タブの代わりに空白文字挿入
