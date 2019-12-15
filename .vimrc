@@ -6,22 +6,23 @@ set nocompatible "vi非互換モード
 filetype off
 
 set rtp+=~/.vim/vundle.git/
-call vundle#rc()
+call vundle#begin()
 
 "## original repos on github
-Bundle 'thinca/vim-quickrun'
+Plugin 'thinca/vim-quickrun'
 
 "## vim-scripts repos
-Bundle 'YankRing.vim'
-Bundle 'surround.vim'
-Bundle 'Changed'
-Bundle 'matchit.zip'
-Bundle 'molokai'
-Bundle 'Solarized'
-Bundle 'Wombat'
+Plugin 'YankRing.vim'
+Plugin 'surround.vim'
+Plugin 'Changed'
+Plugin 'matchit.zip'
+Plugin 'tomasr/molokai'
+Plugin 'Solarized'
+Plugin 'Wombat'
+
 
 "## non github repos
-
+call vundle#end()
 filetype plugin indent on
 
 set helplang=ja "Helpを日本語優先
